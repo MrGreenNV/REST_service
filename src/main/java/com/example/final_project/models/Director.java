@@ -12,7 +12,7 @@ public class Director {
     private String firstName;
     private String lastName;
 
-    @OneToMany(targetEntity = Movie.class, mappedBy = "director")
+    @OneToMany(targetEntity = Movie.class, mappedBy = "director", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Movie> movies;
 
     public Director() {
