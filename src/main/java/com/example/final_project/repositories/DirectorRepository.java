@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface DirectorRepository extends JpaRepository<Director, Long> {
-    Optional<Director> findById(Long id);
+    Optional<Director> findByFirstName(String firstName);
 }
